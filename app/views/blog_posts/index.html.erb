@@ -8,7 +8,8 @@
             <%= link_to blog_post.title, blog_post %>
           </div>
           <div class="panel-body">
-            by <%= blog_post.author %><br />
+            by <strong><%= blog_post.author %></strong></ br>
+            <p><span class="posted_at">posted at: <%= blog_post.created_at.strftime('%m-%d-%Y at %I:%M%p') %></p>
             <p><%= blog_post.blog_entry[0..250] %>...[<%= link_to "READ MORE", blog_post %>]</p>
           </div>
           <div class="panel-footer">
@@ -20,6 +21,7 @@
     <% end %>
 </div>
 
-<br>
 
-<%= link_to 'New Blog post', new_blog_post_path %>
+            
+            
+            

@@ -28,9 +28,9 @@
   </div>
   <% @blog_post.comments.each do |comment| %>
   <div class="panel-body">
-    <p><strong><%= commen.author %></strong> said: </p>
+    <p><strong><%= comment.author %></strong> said: </p>
     <p><%= comment.comment_entry %></p>
-    <p><span class="posted_at">posted at: t<%= @blogpost.created_at.strftime('%m-%d-%Y at %I:%M%p') %></span></p>
+    <p><span class="posted_at">posted at: <%= comment.created_at.strftime('%m-%d-%Y at %I:%M%p') %></span></p>
   </div>
   <%end%>
 </div>

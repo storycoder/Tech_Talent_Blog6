@@ -10,7 +10,7 @@
             </div>
           </div>
           <div class="panel-body">
-            by <strong><%= blog_post.author %></strong></ br>
+            by <strong><%= blog_post.user.email %></strong></ br>
             <p><span class="posted_at">posted at: <%= blog_post.created_at.strftime('%m-%d-%Y at %I:%M%p') %></p>
             <p><%= blog_post.blog_entry[0..250] %>...[<%= link_to "READ MORE", blog_post %>]</p>
           </div>
